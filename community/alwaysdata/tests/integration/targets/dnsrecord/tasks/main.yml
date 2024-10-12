@@ -1,0 +1,9 @@
+---
+- name: Add DNS record
+  community.alwaysdata.dnsrecords:
+    domain: "{{ dnsrecords[0].domain }}"
+    token: "{{ dnsrecords[0].token }}"
+    type: "{{ item.type }}"
+    name: "{{ dnsrecords[0].name }}"
+    value: "{{ item.value }}"
+  with_items: "{{ dnsrecords[0].types }}"
