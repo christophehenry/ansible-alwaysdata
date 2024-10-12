@@ -1,0 +1,21 @@
+namespace: christophehenry
+name: alwaysdata
+version: 0.0.1
+readme: README.md
+authors:
+- Christophe Henry <contact@c-henry.fr>
+description: Collection of modules for interacting with AlwaysData's HTTP API
+license_file: LICENSE
+tags: []
+dependencies: {}
+repository: https://github.com/christophehenry/ansible-alwaysdata
+homepage: https://github.com/christophehenry/ansible-alwaysdata
+issues: https://github.com/christophehenry/ansible-alwaysdata/issues
+build_ignore:
+# Ignore vars file that contains the senitive data for integration tests
+- "**/tests/integration/**/vars"
+# Ignore test artefacts
+- "**/debug_data.py"
+- "**/debug.py"
+- "**/inventory"
+- "**/__pycache__"

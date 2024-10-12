@@ -1,0 +1,10 @@
+---
+- name: Add DNS record
+  christophehenry.alwaysdata.dnsrecord:
+    domain: "{{ dnsrecords[0].domain }}"
+    token: "{{ dnsrecords[0].token }}"
+    type: "{{ item.type }}"
+    name: "{{ dnsrecords[0].name }}"
+    value: "{{ item.value }}"
+  with_items: "{{ dnsrecords[0].types }}"
+# How do I test that!?
